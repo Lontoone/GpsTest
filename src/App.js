@@ -7,6 +7,9 @@ import Main from "./pages/Main";
 
 function App() {
   return (
+    <>
+      <Main />
+      {/*
     <Router>
       <Fragment>
         <Routes>
@@ -15,6 +18,8 @@ function App() {
         </Routes>
       </Fragment>
     </Router>
+    */}
+    </>
   );
 }
 

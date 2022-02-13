@@ -14,7 +14,7 @@ function OptsControl() {
               Cookies.get("endIndex")
             ];
 
-          window.location = `google.navigation:q=${target.latitude},${target.longitude}&mode=d`;
+          window.location = `https://maps.google.com/?q=${target.latitude},${target.longitude}&mode=d`;
         }}
       >
         開啟Google 地圖

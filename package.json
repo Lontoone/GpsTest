@@ -1,8 +1,8 @@
 {
   "name": "2022_gps_nav",
-  "homepage":"https://Lontoone.github.io/Games/geoTest",
+  "homepage": "https://lontoone.github.io/GpsTest",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@react-three/drei": "^8.8.4",
     "@testing-library/jest-dom": "^5.16.2",
@@ -21,8 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

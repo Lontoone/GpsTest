@@ -4,20 +4,26 @@
 }
 .character-container {
   width: 30%;
-  height: 30%;
   position: fixed;
   bottom: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 /* 暫時 */
 .character-container img {
   object-fit: contain;
-  width: 100%;
+  width: 50vw;
 }
 
 .dialog-container {
-  position: absolute;
+  /*position: absolute;*/
   top: 30%;
   left: 100%;
+  z-index: 2;
 }
 .dialog-box {
   background-color: rgb(182, 255, 255);
@@ -32,9 +38,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  padding: 15px;
 
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .button {
@@ -69,6 +78,7 @@
 
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .opts-container button {

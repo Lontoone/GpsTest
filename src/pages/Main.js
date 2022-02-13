@@ -70,7 +70,7 @@ export default function Main() {
         <div className="character-container">
           {/*<LoadModel />*/}
           {/* 暫時用圖片 */}
-          <img src="./game_2.png" />
+          <img src="https://i.imgur.com/8UT2P8r.png" />
 
           {/* 對話 */}
           <div className="dialog-container">

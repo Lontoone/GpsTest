@@ -1,16 +1,20 @@
 import React, { useRef } from "react";
 import Webcam from "react-webcam";
 
-export default function VideoBackground() {
+function VideoBackground() {
   const webcamRef = React.useRef(null);
+  const isLandscape = window.innerHeight <= window.innerWidth;
+  const ratio = isLandscape
+    ? window.innerWidth / window.innerHeight
+    : window.innerHeight / window.innerWidth;
   const videoConstraints = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-    facingMode: "user",
+    facingMode: "environment",
+    aspectRatio: ratio,
   };
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
   }, [webcamRef]);
+
   return (
     <>
       <Webcam
@@ -25,3 +29,5 @@ export default function VideoBackground() {
     </>
   );
 }
+
+export default VideoBackground;
