@@ -1,0 +1,81 @@
+.root-container {
+  width: 100vw;
+  height: 100vh;
+}
+.character-container {
+  width: 30%;
+  height: 30%;
+  position: fixed;
+  bottom: 0;
+}
+/* 暫時 */
+.character-container img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.dialog-container {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+}
+.dialog-box {
+  background-color: rgb(182, 255, 255);
+  border: solid 2px rgb(67, 124, 167);
+  border-radius: 0px 15px 15px 15px;
+  padding: 10px;
+  min-width: 150px;
+  min-height: 50px;
+}
+.button-group-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: solid 1px rgb(216, 157, 30);
+  font-size: 12pt;
+
+  background-color: rgb(255, 210, 126);
+}
+
+.button:hover {
+  background-color: rgb(158, 137, 98);
+}
+.button-selected {
+  font-size: 12pt;
+  height: 50px;
+  width: 150px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(238, 177, 65);
+}
+
+.opts-container {
+  position: fixed;
+  bottom: 0;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opts-container button {
+  cursor: pointer;
+  border-radius: 15px;
+  border: solid 1px rgb(77, 77, 77);
+  height: 25px;
+  margin: 5px;
+  background-color: rgb(158, 245, 255);
+}
