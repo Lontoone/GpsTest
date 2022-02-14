@@ -23,12 +23,13 @@ function StartButtonControl({onSet}) {
   //找到距離該點最近的一組資料
   function getClosestData(lat, lon) {
     const targetPos = new Vector2(lat, lon);
-    const min_dis = 999;
+    var min_dis = 999;
     var result_index = 0;
     datas.forEach((data, i) => {
       const _startPos = new Vector2(data.latitude, data.longitude);
       const d = _startPos.distanceTo(targetPos);
       if (d < min_dis) {
+        min_dis=d;
         result_index = i;
       }
     });

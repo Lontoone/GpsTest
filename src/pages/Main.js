@@ -50,8 +50,12 @@ export default function Main() {
   }, []);
 
   function checkHasReached(position) {
-    var targetPosition =
-      datas[Cookies.get("startIndex")]?.end_opts[Cookies.get("endIndex")];
+
+    var targetPosition;
+    if (Cookies.get("startIndex") && Cookies.get("endIndex")) {
+      targetPosition = datas[Cookies.get("startIndex")]?.end_opts[Cookies.get("endIndex")];
+    }
+    else { return }
     var tv = new Vector2(targetPosition.latitude, targetPosition.longitude);
     var pv = new Vector2(position.coords.latitude, position.coords.longitude);
     var d = tv.distanceTo(pv);
