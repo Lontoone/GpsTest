@@ -55,7 +55,7 @@ export const startDatas = [
   {
     latitude: 24.055174051682645,
     longitude: 120.6456959240686,
-    name: "我家",
+    name: "開發者測試專用",
     end_opts: [
       {
         latitude: 24.055021,
