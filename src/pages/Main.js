@@ -29,11 +29,15 @@ export default function Main() {
 
     //選擇完終點=> 切換對話
     if (i == 2) {
-      //console.log(startDatas[Cookies.get("startIndex")].end_opts);
       var text =
         datas[Cookies.get("startIndex")].end_opts[Cookies.get("endIndex")]
           .mid_text;
       setMsg(text);
+
+      setInterval(() => {
+        console.log(uiIndex);
+        GeoFindMe(checkHasReached);
+      }, 1500);
     }
   };
   const uis = [
@@ -43,19 +47,16 @@ export default function Main() {
     "",
   ];
 
-  useEffect(() => {
-    setInterval(() => {
-      GeoFindMe(checkHasReached);
-    }, 1500);
-  }, []);
+  useEffect(() => {}, []);
 
   function checkHasReached(position) {
-
     var targetPosition;
     if (Cookies.get("startIndex") && Cookies.get("endIndex")) {
-      targetPosition = datas[Cookies.get("startIndex")]?.end_opts[Cookies.get("endIndex")];
+      targetPosition =
+        datas[Cookies.get("startIndex")]?.end_opts[Cookies.get("endIndex")];
+    } else {
+      return;
     }
-    else { return }
     var tv = new Vector2(targetPosition.latitude, targetPosition.longitude);
     var pv = new Vector2(position.coords.latitude, position.coords.longitude);
     var d = tv.distanceTo(pv);
@@ -64,6 +65,8 @@ export default function Main() {
     if (d <= 0.0005) {
       //0.0001=精度1公尺
       setMsg("完成導覽!");
+      //Cookies.remove("startIndex");
+      //Cookies.remove("endIndex");
     }
   }
 

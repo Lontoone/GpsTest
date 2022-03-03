@@ -1,10 +1,13 @@
 import Cookies from "js-cookie";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import ButtonGroups from "./ButtonGroup";
 import { startDatas } from "../Data/geoData";
 
-function EndButtonControl({onSet}) {
-  const datas =useMemo(()=> startDatas[Cookies.get("startIndex")].end_opts);
+function EndButtonControl({ onSet }) {
+  const datas = useMemo(() => startDatas[Cookies.get("startIndex")].end_opts);
+  useEffect(() => {
+    Cookies.set("endIndex", 0);
+  }, []);
   return (
     <div className="button-group-container">
       <p>選擇終點</p>

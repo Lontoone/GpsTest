@@ -16,7 +16,9 @@ function StartButtonControl({onSet}) {
     const longitude = position.coords.longitude;
     console.log(position.coords);
 
-    setTarget_Index(getClosestData(latitude, longitude));
+    var cloest_index=getClosestData(latitude, longitude);
+    Cookies.set("startIndex",cloest_index);
+    setTarget_Index(cloest_index);
     setIsReady(true);
   }
 

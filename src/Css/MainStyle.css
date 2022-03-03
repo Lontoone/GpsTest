@@ -3,9 +3,12 @@
   height: 100vh;
 }
 .character-container {
-  width: 30%;
+  width: 45%;
+  max-width: 300px;
+  
   position: fixed;
   bottom: 0;
+  right: 0;
   z-index: 2;
 
   display: flex;
@@ -14,9 +17,9 @@
   align-items: center;
 }
 /* 暫時 */
-.character-container img {
+.character-container_img {
   object-fit: contain;
-  width: 50vw;
+  width: 100%;
 }
 
 .dialog-container {

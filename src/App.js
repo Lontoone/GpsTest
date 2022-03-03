@@ -4,11 +4,12 @@ import Test from "./pages/test";
 import "./App.css";
 import { Fragment } from "react";
 import Main from "./pages/Main";
+import NewMain from "./pages/NewMain";
 
 function App() {
   return (
     <>
-      <Main />
+      <NewMain />
       {/*
     <Router>
       <Fragment>
