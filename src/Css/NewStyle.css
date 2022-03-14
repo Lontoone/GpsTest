@@ -4,7 +4,7 @@
   height: 80vh;
 
   position: fixed;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -34,7 +34,7 @@
 }
 
 .infoBox-content {
-  width: 100%;
+  width: 90%;
   height: 80%;
   position: absolute;
   top: 50%;
@@ -57,7 +57,7 @@
 }
 .infoBox-title {
   text-align: center;
-  font-size: 25pt;
+  font-size: 1.2em;
   font-weight: 900;
   color: rgb(67, 67, 67);
 }
@@ -75,6 +75,7 @@
   display: flex;
   flex-grow: 1;
   font-weight: bolder;
+  font-size: 3vw;
 }
 /*
 .infoBox-btn {
@@ -83,7 +84,7 @@
   right: 0;
 }*/
 .infoBox-optsContainer {
-  max-height: 150px;
+  max-height: 70px;
   padding-bottom: 50px;
   display: flex;
   justify-content: flex-end;

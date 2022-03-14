@@ -3,6 +3,7 @@ import { Vector2 } from "three";
 import NewInfoBox from "../Components/NewInfoBox";
 import VideoBackground from "../Components/VideoBackground";
 import { GeoFindMe } from "../util/GpsProvider";
+import canpasIcon from "../Img/canpas.png";
 
 const datas = [
   {
@@ -63,6 +64,11 @@ function NewMain() {
   return (
     <>
       <div className="root-container">
+        {/* 羅盤icon */}
+        <div className="canpasIcon-container">
+          <img src={canpasIcon}/>
+          </div>
+
         {/* 模型 */}
         <div className="character-container">
           {/*<LoadModel />*/}
@@ -71,12 +77,7 @@ function NewMain() {
             src="https://i.imgur.com/8UT2P8r.png"
             className="character-container_img"
           />
-
-          {/* 對話 
-          <div className="dialog-container">
-            <DialogBox msg={msg} />
-          </div>
-          */}
+         
           {/* 資訊欄位 */}
           {cloestPoint ? <NewInfoBox data={cloestPoint}></NewInfoBox> : null}
         </div>

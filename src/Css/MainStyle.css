@@ -92,3 +92,14 @@
   margin: 5px;
   background-color: rgb(158, 245, 255);
 }
+
+
+/* 羅盤Icon */
+.canpasIcon-container{
+  position: fixed;
+  right: 25px;
+  top: 15px;
+}
+.canpasIcon-container img{
+  height: 70px;
+}
