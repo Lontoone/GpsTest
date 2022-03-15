@@ -1,12 +1,14 @@
 .root-container {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  background-color: #a5a5a5;
 }
 .character-container {
   width: 45%;
   max-width: 300px;
   
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   z-index: 2;
@@ -102,4 +104,47 @@
 }
 .canpasIcon-container img{
   height: 70px;
+}
+
+.new-options-root{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+}
+.new-options-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.new-options-title img{
+  color: #DCFF98;
+}
+
+.new-option{
+  width: 150px;
+  height: 30px;
+  background-color: #F4FFE9;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #BADBC5;
+  margin: 5px 0;
+}
+.new-option img{
+  object-fit: contain;
+  height: 100%;
+
+}
+.new-option span{
+  margin: auto;
+  color: #5589AD;
+  font-weight: 900;
+}
+.new-option-container{
+  display: flex;
+  flex-direction: column;
 }

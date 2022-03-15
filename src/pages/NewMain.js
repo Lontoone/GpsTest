@@ -4,6 +4,7 @@ import NewInfoBox from "../Components/NewInfoBox";
 import VideoBackground from "../Components/VideoBackground";
 import { GeoFindMe } from "../util/GpsProvider";
 import canpasIcon from "../Img/canpas.png";
+import map from "../Img/map.png";
 
 const datas = [
   {
@@ -55,7 +56,7 @@ function NewMain() {
     setInterval(() => {
       var _point = GeoFindMe(GetMatchPosition);
       if (_point != null) {
-          console.log(_point);
+        console.log(_point);
         setCloestPoint(_point);
       }
     }, 1500);
@@ -66,8 +67,8 @@ function NewMain() {
       <div className="root-container">
         {/* 羅盤icon */}
         <div className="canpasIcon-container">
-          <img src={canpasIcon}/>
-          </div>
+          <img src={canpasIcon} />
+        </div>
 
         {/* 模型 */}
         <div className="character-container">
@@ -77,18 +78,41 @@ function NewMain() {
             src="https://i.imgur.com/8UT2P8r.png"
             className="character-container_img"
           />
-         
+
           {/* 資訊欄位 */}
           {cloestPoint ? <NewInfoBox data={cloestPoint}></NewInfoBox> : null}
+
         </div>
+
         {/* 地點選項UI */}
-        <div></div>
+        <div className="new-options-root">
+          <div className="new-options-title">
+            <img src={map} />
+            <span>鄰近景點</span>
+          </div>
+
+          <div className="new-option-container">
+            {/* ... 選項 */}
+            {opt("132")}
+            {opt("132")}
+          </div>
+        </div>
+
 
         {/*鏡頭背景 */}
         <VideoBackground />
       </div>
     </>
   );
+}
+
+const opt = (text) => {
+  return(
+  <div className="new-option">
+    <span>{text}123</span>
+    <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGc+PHBhdGggZD0iTTE1Ny42NjY2Nyw4NmMwLDM5LjU3NzkyIC0zMi4wODg3NSw3MS42NjY2NyAtNzEuNjY2NjcsNzEuNjY2NjdjLTM5LjU3NzkyLDAgLTcxLjY2NjY3LC0zMi4wODg3NSAtNzEuNjY2NjcsLTcxLjY2NjY3YzAsLTM5LjU3NzkyIDMyLjA4ODc1LC03MS42NjY2NyA3MS42NjY2NywtNzEuNjY2NjdjMzkuNTc3OTIsMCA3MS42NjY2NywzMi4wODg3NSA3MS42NjY2Nyw3MS42NjY2N3oiIGZpbGw9IiMyZWNjNzEiPjwvcGF0aD48cGF0aCBkPSJNNzguODMzMzMsNzguODMzMzNoMTQuMzMzMzN2MzkuNDE2NjdoLTE0LjMzMzMzek05NC45NTgzMyw1OS4xMjVjMCw0Ljk0MTQyIC00LjAxNjkyLDguOTU4MzMgLTguOTU4MzMsOC45NTgzM2MtNC45NDE0MiwwIC04Ljk1ODMzLC00LjAxNjkyIC04Ljk1ODMzLC04Ljk1ODMzYzAsLTQuOTQxNDIgNC4wMTY5MiwtOC45NTgzMyA4Ljk1ODMzLC04Ljk1ODMzYzQuOTQxNDIsMCA4Ljk1ODMzLDQuMDE2OTIgOC45NTgzMyw4Ljk1ODMzeiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" />
+  </div>
+  )
 }
 
 export default NewMain;
