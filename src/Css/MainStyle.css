@@ -8,7 +8,7 @@
   width: 45%;
   max-width: 300px;
   
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 2;
@@ -109,40 +109,57 @@
 .new-options-root{
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
+  /*
   left: 10%;
+  bottom: 5%;
+  */
+  bottom: 0;
+
+  width: 100vw;
+  height: 120px;
+  
+  background-color: #5CB6F2;
+}
+.new-options-container{
+  position: absolute;
+  left: 5%;
   bottom: 5%;
 }
 .new-options-title{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  color: #F4FFE9;  
+  font-weight: 900;
+  font-size: 13pt;
 }
 .new-options-title img{
   color: #DCFF98;
+  height: 30px;
 }
 
 .new-option{
   width: 150px;
-  height: 30px;
+  height: 25px;
   background-color: #F4FFE9;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: solid 2px #BADBC5;
-  margin: 5px 0;
+  margin: 5px 0;  
 }
 .new-option img{
   object-fit: contain;
   height: 100%;
-
 }
 .new-option span{
   margin: auto;
   color: #5589AD;
   font-weight: 900;
+  font-size: 11pt;
 }
 .new-option-container{
   display: flex;

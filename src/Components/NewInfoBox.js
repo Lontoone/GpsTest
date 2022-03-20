@@ -29,12 +29,12 @@ function NewInfoBox({ data }) {
           {/* 內文 */}
           <div className="infoBox-text">{data.text}</div>
           
-          {/* 遊戲按鈕? 
+          {/* 遊戲按鈕? */}
           <div className="infoBox-optsContainer">
             {data.opts ? <div className="infoBox-btn">
               <img src={play_btn}></img>
             </div> : null}
-          </div>*/}
+          </div>
 
         </div>
         {/* 尾巴 */}
