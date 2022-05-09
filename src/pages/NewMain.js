@@ -6,6 +6,8 @@ import { GeoFindMe } from "../util/GpsProvider";
 import canpasIcon from "../Img/canpas.png";
 import map from "../Img/map.png";
 import { datas } from "../Data/geoData";
+import LoadModel from "../util/LoadModel";
+import LoadFBX from "../util/LoadFBX";
 /*
 const datas = [
   {
@@ -44,7 +46,7 @@ const datas = [
     opts: {},
   },
 ];*/
-
+//原url https://lontoone.github.io/GpsTest
 //取得範圍內的點
 
 //取得最近的兩個點
@@ -85,7 +87,7 @@ function GetCloest2DataIndexs(currentPointData) {
 }
 
 function NewMain() {
-  const [cloestPoint, setCloestPoint] = useState(datas[datas.length - 1]);
+  const [cloestPoint, setCloestPoint] = useState();//useState(datas[datas.length - 1]);
   const [AdjcentPoints, setAdjcentPoints] = useState(null);
 
   function GetMatchPosition(position) {
@@ -102,19 +104,20 @@ function NewMain() {
       //0.0001=精度1公尺
       //if (d <= 0.0005) {
       if (d <= 0.0005) {
-        console.log("cloest");
-        console.log(datas[i]);
+        //console.log("cloest");
+        //console.log(datas[i]);
         setCloestPoint(datas[i]);
         return;
         //return datas[i];
       }
     }
     //return null;
+    setCloestPoint(null)
   }
 
   useEffect(() => {
     setInterval(() => {
-      GeoFindMe(GetMatchPosition);
+      //GeoFindMe(GetMatchPosition);
       /*
       var _point = GeoFindMe(GetMatchPosition);
       console.log(_point);
@@ -128,8 +131,8 @@ function NewMain() {
     /* 測試用
     setInterval(()=>{
       GetMatchPosition({coords:{latitude:24.14260896,longitude: 120.6771112}})
-    },3000)
-    */
+    },3000)*/
+    
     
   }, []);
 
@@ -150,13 +153,14 @@ function NewMain() {
         </div>
 
         {/* 模型 */}
-        <div className="character-container">
-          {/*<LoadModel />*/}
-          {/* 暫時用圖片 */}
+        <div className="character-container">          
+          {/*<LoadModel />*/}          
+          <LoadFBX/>
+          {/* 暫時用圖片 
           <img
             src="https://i.imgur.com/8UT2P8r.png"
             className="character-container_img"
-          />
+          />*/}
 
           {/* 資訊欄位 */}
           {cloestPoint ? <NewInfoBox data={cloestPoint}></NewInfoBox> : null}

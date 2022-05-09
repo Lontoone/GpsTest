@@ -22,7 +22,7 @@ export default function LoadModel() {
   }*/
   function Fbx() {
     //const texture = useTexture("../textures/Adam_Head_a.jpg");
-    const model = useFBX("./Anime_character.fbx");
+    const model = useFBX("willow0322.FBX");
     return <primitive object={model} scale={0.00015} position={(0, 0, 0)} />;
   }
   return (
