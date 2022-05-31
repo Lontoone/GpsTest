@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/GpsTest/static/css/main.c6a068aa.css",
-    "main.js": "/GpsTest/static/js/main.f3d08e90.js",
-    "static/js/787.9ff1d665.chunk.js": "/GpsTest/static/js/787.9ff1d665.chunk.js",
-    "static/media/willow0325.fbx": "/GpsTest/static/media/willow0325.a3b484dc965a8501ad39.fbx",
-    "static/media/Adam_Head_a.jpg": "/GpsTest/static/media/Adam_Head_a.32ccf64f4d8ce71d0e2a.jpg",
-    "static/media/willow sister texture_FIN.png": "/GpsTest/static/media/willow sister texture_FIN.6d4690c313cf83e9bccc.png",
-    "static/media/canpas.png": "/GpsTest/static/media/canpas.b2c77105de5b84013313.png",
-    "static/media/logo.svg": "/GpsTest/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/GpsTest/index.html",
-    "main.c6a068aa.css.map": "/GpsTest/static/css/main.c6a068aa.css.map",
-    "main.f3d08e90.js.map": "/GpsTest/static/js/main.f3d08e90.js.map",
-    "787.9ff1d665.chunk.js.map": "/GpsTest/static/js/787.9ff1d665.chunk.js.map"
+    "main.css": "/Lontoone/GpsTest/static/css/main.6c3d3b77.css",
+    "main.js": "/Lontoone/GpsTest/static/js/main.c055c0fc.js",
+    "static/js/787.9ff1d665.chunk.js": "/Lontoone/GpsTest/static/js/787.9ff1d665.chunk.js",
+    "static/media/willow0325.fbx": "/Lontoone/GpsTest/static/media/willow0325.a3b484dc965a8501ad39.fbx",
+    "static/media/Adam_Head_a.jpg": "/Lontoone/GpsTest/static/media/Adam_Head_a.32ccf64f4d8ce71d0e2a.jpg",
+    "static/media/willow sister texture_FIN.png": "/Lontoone/GpsTest/static/media/willow sister texture_FIN.6d4690c313cf83e9bccc.png",
+    "static/media/canpas.png": "/Lontoone/GpsTest/static/media/canpas.b2c77105de5b84013313.png",
+    "static/media/logo.svg": "/Lontoone/GpsTest/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Lontoone/GpsTest/index.html",
+    "main.6c3d3b77.css.map": "/Lontoone/GpsTest/static/css/main.6c3d3b77.css.map",
+    "main.c055c0fc.js.map": "/Lontoone/GpsTest/static/js/main.c055c0fc.js.map",
+    "787.9ff1d665.chunk.js.map": "/Lontoone/GpsTest/static/js/787.9ff1d665.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6a068aa.css",
-    "static/js/main.f3d08e90.js"
+    "static/css/main.6c3d3b77.css",
+    "static/js/main.c055c0fc.js"
   ]
 }
