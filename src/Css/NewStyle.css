@@ -37,7 +37,8 @@
   left: 50%;*/
   right: 400px;
   bottom: 350px;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
 }
 
 .infoBox-content {

@@ -16,7 +16,8 @@ function NewInfoBox({ data }) {
           {/* 標頭圖片 */}
           <img
             className="infoBox-titleImage"
-            src="https://photo.travelking.com.tw/scenery/EF643D1A-2E8D-439D-8E16-648F976D2837_d.jpg"
+            src={process.env.PUBLIC_URL+"/Img/" +data.img}
+            //src="https://photo.travelking.com.tw/scenery/EF643D1A-2E8D-439D-8E16-648F976D2837_d.jpg"
           ></img>
 
           {/* 標題 */}

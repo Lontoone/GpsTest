@@ -87,7 +87,7 @@ function GetCloest2DataIndexs(currentPointData) {
 }
 
 function NewMain() {
-  const [cloestPoint, setCloestPoint] = useState();//useState(datas[datas.length - 1]);
+  const [cloestPoint, setCloestPoint] = useState(); //useState(datas[datas.length - 1]);
   const [AdjcentPoints, setAdjcentPoints] = useState(null);
 
   function GetMatchPosition(position) {
@@ -100,10 +100,11 @@ function NewMain() {
     for (var i = 0; i < datas.length; i++) {
       var tv = new Vector2(datas[i].latitude, datas[i].longitude);
       var d = tv.distanceTo(currentPosition);
+      //console.log(d);
 
       //0.0001=精度1公尺
       //if (d <= 0.0005) {
-      if (d <= 0.0005) {
+      if (d <= 0.0008) {
         //console.log("cloest");
         //console.log(datas[i]);
         setCloestPoint(datas[i]);
@@ -111,29 +112,21 @@ function NewMain() {
         //return datas[i];
       }
     }
+    // ** 若不在位置上 **
     //return null;
-    setCloestPoint(null)
+    setCloestPoint(null);
   }
 
   useEffect(() => {
     setInterval(() => {
-      //GeoFindMe(GetMatchPosition);
-      /*
-      var _point = GeoFindMe(GetMatchPosition);
-      console.log(_point);
-      if (_point != null) {
-        console.log("set point ");
-        console.log(_point);
-        setCloestPoint(_point);
-      }*/
+      GeoFindMe(GetMatchPosition);
     }, 3000);
 
     /* 測試用
     setInterval(()=>{
-      GetMatchPosition({coords:{latitude:24.14260896,longitude: 120.6771112}})
-    },3000)*/
-    
-    
+      //GetMatchPosition({coords:{latitude:24.14260896,longitude: 120.6771112}})
+      GetMatchPosition({coords:{latitude:24.24260896,longitude: 120.76771112}})
+    },13000)*/
   }, []);
 
   useEffect(() => {
@@ -148,23 +141,28 @@ function NewMain() {
     <>
       <div className="root-container">
         {/* 羅盤icon */}
-        <div className="canpasIcon-container">
+        <div className="canpasIcon-container" hidden>
           <img src={canpasIcon} />
         </div>
 
+        {/* 不在路線上提示 */}
+        {!cloestPoint && (
+          <div className="top-dialog-box-container">
+            此遊戲為LBS定位，請至柳川水岸步道上遊玩唷！
+          </div>
+        )}
         {/* 模型 */}
         <div className="character-container">          
-          {/*<LoadModel />*/}          
-          <LoadFBX/>
-          {/* 暫時用圖片 
-          <img
-            src="https://i.imgur.com/8UT2P8r.png"
-            className="character-container_img"
-          />*/}
+          <LoadFBX />         
 
           {/* 資訊欄位 */}
           {cloestPoint ? <NewInfoBox data={cloestPoint}></NewInfoBox> : null}
+
         </div>
+        
+        {/* 地圖片段 */}
+        {cloestPoint? <img className="map-pic" src={process.env.PUBLIC_URL+"/Img/"+cloestPoint.map}></img> : null}
+
 
         {/* 地點選項UI */}
         <div className="new-options-root">

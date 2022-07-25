@@ -1,6 +1,6 @@
 {
   "name": "2022_gps_nav",
-  "homepage": "https://dl.geo.com.tw/Willow/front/ar-guide",
+  "homepage": "https://river.taichung.gov.tw/ar-guide/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

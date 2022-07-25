@@ -11,10 +11,10 @@ import { AmbientLight, TextureLoader } from "three";
 
 const Fbx = () => {
   const ref = useRef();
-  const colorMap = useLoader(TextureLoader, texture);
-  console.log(colorMap);
+  //const colorMap = useLoader(TextureLoader, texture);
+  //console.log(colorMap);
   const path = require("../models/willow0325.fbx");
-  const loader = new FBXLoader();
+  //const loader = new FBXLoader();
   //const fbx = useLoader(FBXLoader, path);
   const fbx = useFBX(path);
   //console.log(fbx);

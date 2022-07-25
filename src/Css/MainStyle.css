@@ -3,11 +3,12 @@
   height: 100vh;
   position: relative;
   background-color: #a5a5a5;
+  overflow: hidden;
 }
 .character-container {
   width: 45%;
   max-width: 300px;
-  
+
   position: fixed;
   bottom: 0;
   right: 10%;
@@ -95,18 +96,52 @@
   background-color: rgb(158, 245, 255);
 }
 
+/* 地圖 圖片 */
+.map-pic{
+  width: 100%;
+  max-width: 500px;
+  max-height: 150px;
+  position: absolute;
+  /*bottom: calc(150px + 150px);*/
+  bottom: 130px;  
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+/* 不在路線上提示 */
+.top-dialog-box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  border-radius: 15px;
+  min-height: 150px;
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+  color: #777;
+  font-size: large;
+  font-weight: 900;
+}
 
 /* 羅盤Icon */
-.canpasIcon-container{
+.canpasIcon-container {
   position: fixed;
   right: 25px;
   top: 15px;
 }
-.canpasIcon-container img{
+.canpasIcon-container img {
   height: 70px;
 }
 
-.new-options-root{
+.new-options-root {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -118,57 +153,64 @@
 
   width: 100vw;
   height: 120px;
-  
-  background-color: #5CB6F2;
+
+  background-color: #5cb6f2;
 }
-.new-options-container{
+.new-options-container {
   position: absolute;
   left: 5%;
   bottom: 5%;
 }
-.new-options-title{
+.new-options-title {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  color: #F4FFE9;  
+  color: #f4ffe9;
   font-weight: 900;
   font-size: 13pt;
 }
-.new-options-title img{
-  color: #DCFF98;
+.new-options-title img {
+  color: #dcff98;
   height: 30px;
 }
 
-.new-option{
+.new-option {
   width: 150px;
   height: 25px;
-  background-color: #F4FFE9;
+  background-color: #f4ffe9;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px #BADBC5;
-  margin: 5px 0;  
+  border: solid 2px #badbc5;
+  margin: 5px 0;
 }
-.new-option img{
+.new-option img {
   object-fit: contain;
   height: 100%;
 }
-.new-option span{
+.new-option span {
   margin: auto;
-  color: #5589AD;
+  color: #5589ad;
   font-weight: 900;
   font-size: 11pt;
 }
-.new-option-container{
+.new-option-container {
   display: flex;
   flex-direction: column;
 }
 
-.fbx-container{
+.fbx-container {
   width: 500px;
   height: 350px;
   max-height: 20%;
   z-index: 99;
+}
+
+@media screen and (min-width: 1100px) {
+  .map-pic{
+    right: 150px;
+    
+  }
 }
